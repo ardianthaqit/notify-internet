@@ -1,0 +1,118 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f2f2f2;
+        }
+        
+        .wrapper {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            animation: show_toast 1s ease forwards;
+        }
+        
+        @keyframes show_toast {
+            0% {
+                transform: translateX(-100%);
+            }
+            40% {
+                transform: translateX(10%);
+            }
+            80%,
+            100% {
+                transform: translateX(20px);
+            }
+        }
+        
+        .wrapper.hide {
+            animation: hide_toast 1s ease forwards;
+        }
+        
+        @keyframes hide_toast {
+            0% {
+                transform: translateX(20px);
+            }
+            40% {
+                transform: translateX(10%);
+            }
+            80%,
+            100% {
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(-100%);
+            }
+        }
+        
+        .wrapper .toast {
+            padding: 20px 15px 20px 20px;
+            border-radius: 10px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 100px;
+            box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
+            width: 425px;
+        }
+        
+        .wrapper .toast .offline {
+            border-color: #ccc;
+        }
+        
+        .toast .contect {
+            align-items: center;
+            display: flex;
+        }
+        
+        .details {
+            font-size: 20px;
+        }
+        
+        .toast .contect .icon {
+            font-size: 35px;
+            font-weight: 100;
+            border-radius: 20px;
+            background-color: #24BF5F;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        
+        .toast.offline .contect .icon {
+            background: #ccc;
+        }
+        
+        .toast .contect .details {
+            margin-left: 15px;
+        }
+        
+        .contect .details span {
+            font-size: 25px;
+            font-weight: 500;
+        }
+        
+        .contect .details p {
+            color: #878787;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        
+        .close-icon {
+            font-size: 35px;
+            font-weight: 100;
+            border-radius: 50px;
+            /* background-color: rgba(116, 98, 98, 0.377); */
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: rgba(116, 98, 98, 0.377);
+        }
